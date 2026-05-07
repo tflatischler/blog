@@ -4,6 +4,5 @@ date: 2026-05-07
 draft: false
 ---
 
-Welcome to my blog! This is my first post.
-
-Feel free to edit this content and make it your own.
+# Welcome!
+This is my first blog post on tflatischler.com! This blog is for people interested in tech (SBCs, Linux, Raspberry Pi, AI & ML, Python,...).
