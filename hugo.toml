@@ -15,10 +15,10 @@ copyright = "© 2026 Tim Flatischler"
   [services.rss]
     limit = 100  # Anzahl der Einträge im Feed   
 
-[params]
-  [params.author]
-    email = "kontakt@beispiel.de"
-    name = "Ihr Name"
+
+[[params.author]]
+  email = "kontakt@beispiel.de"
+  name = "Ihr Name"
 
 [[params.social]]
 name = "GitHub"
