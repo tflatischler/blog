@@ -10,6 +10,17 @@ theme = "archie"
   bgColor = "#181A1B"
   textColor = "#FFEEC9"
 
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/athul/archie"
+
+[outputs]
+  home = ["html", "rss"]
+  section = ["html", "rss"]
+  taxonomy = ["html"]  # Deaktiviert RSS für Taxonomien
+  term = ["html"]      # Deaktiviert RSS für Term-Seiten   
+
 [[menu.main]]
 name = "Home"
 url = "/"
