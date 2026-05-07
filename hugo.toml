@@ -1,6 +1,6 @@
 baseURL = "https://tflatischler.github.io/tflatischler-blog/"
 locale = 'de-at'
-title = 'tflatischler'
+title = 'Tim Flatischler'
 theme = "archie"
 
 [params]
