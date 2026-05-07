@@ -1,0 +1,66 @@
+name: Create New Hugo Blog Post
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: 'Title for the new post'
+        required: true
+        default: 'My New Post'
+      slug:
+        description: 'Slug (used in filename)'
+        required: true
+        default: 'my-new-post'
+      draft:
+        description: 'Save as draft?'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+
+jobs:
+  create_post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up variables
+        id: vars
+        run: |
+          TITLE="${{ github.event.inputs.title }}"
+          SLUG="${{ github.event.inputs.slug }}"
+          DRAFT="${{ github.event.inputs.draft }}"
+          DATE=$(date '+%Y-%m-%d')
+          FILENAME="content/posts/${SLUG}.md"
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
+          echo "slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "date=$DATE" >> $GITHUB_OUTPUT
+          echo "draft=$DRAFT" >> $GITHUB_OUTPUT
+          echo "filename=$FILENAME" >> $GITHUB_OUTPUT
+
+      - name: Create new post
+        run: |
+          cat > "${{ steps.vars.outputs.filename }}" <<EOF
+          ---
+          title: "${{ steps.vars.outputs.title }}"
+          date: ${{ steps.vars.outputs.date }}
+          draft: ${{ steps.vars.outputs.draft }}
+          tags: []
+          categories: []
+          ---
+          
+          Your content goes here...
+          EOF
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add "${{ steps.vars.outputs.filename }}"
+          git commit -m "feat: new post '${{ steps.vars.outputs.title }}'"
+          git push
