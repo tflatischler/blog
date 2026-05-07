@@ -17,8 +17,13 @@ copyright = "© Tim Flatischler"
 
 
 [[params.author]]
-  email = "kontakt@beispiel.de"
-  name = "Ihr Name"
+  email = "tim@flatischler.at"
+  name = "Tim Flatischler"
+
+[[params.social]]
+name = "RSS"
+icon = "rss"
+url = "/index.xml"
 
 [[params.social]]
 name = "GitHub"
@@ -42,6 +47,6 @@ url = "/posts"
 weight = 2
 
 [[menu.main]]
-name = "About"
-url = "/about"
+name = "RSS"
+url = "/index.xml"
 weight = 3
