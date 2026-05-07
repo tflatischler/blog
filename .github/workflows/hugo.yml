@@ -1,12 +1,9 @@
-name: Deploy Hugo
-
-on:
-  push:
-    branches: [main]
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
     steps:
       - uses: actions/checkout@v4
         with:
