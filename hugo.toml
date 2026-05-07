@@ -9,3 +9,18 @@ theme = "archie"
   highlightColor = "#FFCC00"
   bgColor = "#181A1B"
   textColor = "#FFEEC9"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
