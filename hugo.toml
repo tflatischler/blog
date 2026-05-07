@@ -1,0 +1,4 @@
+baseURL = "https://tflatischler.github.io/tflatischler-blog/"
+locale = 'de-at'
+title = 'tflatischler'
+theme = "archie"
