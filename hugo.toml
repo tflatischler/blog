@@ -2,6 +2,7 @@ baseURL = "https://tflatischler.github.io/tflatischler-blog/"
 locale = 'de-at'
 title = 'Tim Flatischler'
 theme = "archie"
+copyright = "© 2026 Tim Flatischler"
 
 [params]
   primaryColor = "#2E86AB"
@@ -10,10 +11,19 @@ theme = "archie"
   bgColor = "#181A1B"
   textColor = "#FFEEC9"
 
+[services]
+  [services.rss]
+    limit = 100  # Anzahl der Einträge im Feed   
+
+[params]
+  [params.author]
+    email = "kontakt@beispiel.de"
+    name = "Ihr Name"
+
 [[params.social]]
 name = "GitHub"
 icon = "github"
-url = "https://github.com/athul/archie"
+url = "https://github.com/tflatischler"
 
 [outputs]
   home = ["html", "rss"]
