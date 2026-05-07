@@ -2,7 +2,7 @@ baseURL = "https://tflatischler.github.io/tflatischler-blog/"
 locale = 'de-at'
 title = 'Tim Flatischler'
 theme = "archie"
-copyright = "© 2026 Tim Flatischler"
+copyright = "© Tim Flatischler"
 
 [params]
   primaryColor = "#2E86AB"
