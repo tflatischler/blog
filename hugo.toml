@@ -1,4 +1,4 @@
-baseURL = "https://tflatischler.github.io/tflatischler-blog/"
+baseURL = "https://tflatischler.github.io/blog/"
 locale = 'de-at'
 title = 'Tim Flatischler'
 theme = "archie"
