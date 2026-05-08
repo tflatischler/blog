@@ -1,0 +1,18 @@
+---
+title: "My UniFi Networking Setup"
+date: 2026-05-07
+draft: true
+---
+
+# My UniFi Networking Setup
+I've recently found some old UniFi networking gear in my cellar, probaply from my dad. It  included:
+- UniFi CloudKey Gen1 Plus
+- UniFi Switch 8 150W
+- UniFi Security Gateway
+
+Even though I've never really done anything in networking i felt pretty amitious. I wanted to set up a direct connection between my PC and some Pis in order to controll them without WLAN configured.
+
+//images missing
+
+When I finally got to set up the CloudKey i've noticed that it had some flaws including outdated firmware, but we'll get to this point. On startup, the UCS's display said "Hard Drive Disk Error". But the UCK should work just fine, even withoud an HDD, right? After doing some online research I've found out that the old (installed) firmware of the UCK did required an HDD in order to function. But without the HDD installed I wasn't able to update the firmware, even in recovery mode.
+I therefore couldn't help but to buy an old HDD from e-bay.
